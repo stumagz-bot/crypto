@@ -282,14 +282,16 @@
 
     </section>
 
-    <!-- <section>
+    <section>
 
+        <div class="container">
 
-        <iframe class="center-block" width="560" height="315" src="https://www.youtube.com/embed/XAowXcmQ-kA"
-            frameborder="0" allowfullscreen=""></iframe>
+            <iframe class="center-block" width="100%" style="max-width: 560px;" height="315"
+                src="https://www.youtube.com/embed/XAowXcmQ-kA" frameborder="0" allowfullscreen=""></iframe>
 
-
-    </section> -->
+        </div>
+        <br />
+    </section>
 
 
     </section>
@@ -421,60 +423,8 @@
     <script src="public/js/jquery.waypoints.min.js"></script>
     <script src="public/js/jquery.mb.YTPlayer.min.js"></script>
     <script src="public/js/theme.js"></script>
-    <script src="../apis.google.com/js/platform.js" async defer></script>
-
-    <script type="text/javascript">
-        function onSignIn(googleUser) {
-
-            var profile = googleUser.getBasicProfile();
-            var id_token = googleUser.getAuthResponse().id_token;
-
-            $.ajax({
-                url: "/api/login",
-                type: "POST",
-                dataType: 'json',
-                data: { 'token': id_token },
-                success: function (msg) {
-                    var auth2 = gapi.auth2.getAuthInstance();
-                    auth2.signOut().then(function () {
-
-                        if (msg.result == 1)
-                            window.location.href = "/" + msg.redirect;
-                        else
-                            alert(msg.error_message);
-
-                    });
-
-                },
-                error: function () {
-                    var auth2 = gapi.auth2.getAuthInstance();
-                    auth2.signOut().then(function () {
-                        // window.location.reload();
-                    });
-                }
-            });
-        }
-
-    </script>
 
 </body>
-
-<style type="text/css">
-    .cc-reg-btn,
-    .cc-reg-btn:hover,
-    .cc-reg-btn:focus {
-        background-color: #ffcb2e;
-        color: #000;
-        border: none;
-    }
-
-    .cc-gsignin-btn,
-    .cc-gsignin-btn:hover,
-    .cc-gsignin-btn:focus {
-        background-color: #fff;
-        border: none;
-    }
-</style>
 
 
 

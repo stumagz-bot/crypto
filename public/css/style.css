@@ -275,7 +275,7 @@ END Header Area
     display: flex;
     align-items: center;
     height: 800px;
-    background: #5d12f8;
+    background: #040207;
     padding-top: 80px;
 }
 
@@ -747,7 +747,7 @@ END Testimonial Area
 .video-area {
 	text-align: center;
     position: relative;
-    background: url(..public/img/background.png) center center/cover no-repeat;
+    /* background: url(..public/img/background.png) center center/cover no-repeat; */
     min-height: 400px;
 }
 
